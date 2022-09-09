@@ -1,0 +1,40 @@
+.wrapper { 
+    overflow:hidden;
+  }
+  
+  .wrapper div {
+     min-height: 200px;
+     padding: 10px;
+  }
+  #one {
+    background-color: #0AC;
+    float:left; 
+    margin: 10px;
+    width:450px;
+    height: 450px;
+    border:2px solid #000;
+  }
+  #two { 
+    background-color: #0AC;
+    overflow:hidden;
+    margin:10px;
+    width:450px;
+    height: 450px;
+    border:2px solid #000;
+  }
+  /*
+  #three { 
+    background-color: #0AC;
+    overflow:hidden;
+    margin:10px;
+    width:450px;
+    height: 450px;
+    border:2px solid #000;
+  }
+  */
+  br {
+      margin-top: -125px;
+  }
+  li {
+    list-style-type:none;
+  }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do List</title>
+        
+        <link rel="stylesheet" href="../css/stylin" type="text/css" />
+    </head>
+    <body>
+        
+        <div id="container">
+            <ul id="theList" contenteditable >
+                <li>List Item #1</li>
+            </ul>
+            <p><a href=javascript.void(); id="saveAll">Save All</a></p>
+                <a href=javascript.void(); id="clearAll">Clear All</a>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var theList = document.getElementById('theList');
+                $('#saveAll').click(function(e) {
+                    e.preventDefault();
+                    localStorage.setItem('todoList', theList.innerHTML);
+                });
+                $('#clearAll').click(function(e) {
+                    e.preventDefault();
+                    localStorage.clear();
+                    location.reload();
+                });
+                
+                loadToDo();
+                
+                function loadToDo() {
+                    if(localStorage.getItem('todoList')) {
+                        theList.innerHTML = localStorage.getItem('todoList');
+                    }
+                }
+            });
+            
+        </script>
+    </body>
+</html>
